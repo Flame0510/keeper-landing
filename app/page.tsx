@@ -5,7 +5,7 @@ export default function Home() {
       {/* HERO */}
       <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
         <span className="inline-block mb-6 px-4 py-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 text-amber-400 text-sm font-medium">
-          🎲 Beta aperta
+          🎲 Accesso su invito
         </span>
         <h1 className="text-7xl md:text-9xl font-black text-amber-400 tracking-tighter mb-4">
           Keeper
@@ -18,10 +18,16 @@ export default function Home() {
           regole D&D leggere, immagini generate al volo. Niente DM umano necessario.
         </p>
         <a
-          href="https://keeper-narrative-engine.vercel.app/login"
+          href="https://keeper-narrative-engine.vercel.app/demo"
           className="px-8 py-4 bg-amber-400 text-black font-bold text-lg rounded-xl hover:bg-amber-300 transition-colors"
         >
-          Inizia a giocare →
+          Prova la demo gratuita →
+        </a>
+        <a
+          href="https://keeper-narrative-engine.vercel.app/login"
+          className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
+        >
+          Hai già un account? Accedi →
         </a>
       </section>
 
@@ -87,8 +93,8 @@ export default function Home() {
               {
                 icon: "🖼️",
                 title: "Immagini AI",
-                desc: "Visualizza scene, personaggi e luoghi con immagini generate al momento.",
-                soon: true,
+                desc: "Ogni scena importante viene visualizzata con immagini generate in tempo reale da FLUX AI.",
+                soon: false,
               },
               {
                 icon: "🌿",
@@ -197,6 +203,9 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <p className="text-center text-zinc-600 text-sm mt-8">
+          * I piani a pagamento sono in arrivo. Durante la beta chiusa, l&apos;accesso è gratuito per tutti gli utenti invitati.
+        </p>
       </section>
 
       {/* CTA FINALE */}
@@ -205,13 +214,13 @@ export default function Home() {
           Pronto a scrivere la tua storia?
         </h2>
         <p className="text-zinc-400 mb-10 max-w-md mx-auto text-lg">
-          Unisciti alla beta. È gratis. Niente carte di credito, niente trucchi.
+          Keeper è in accesso su invito. Prova subito la demo gratuita — nessun account necessario.
         </p>
         <a
-          href="https://keeper-narrative-engine.vercel.app/login"
+          href="https://keeper-narrative-engine.vercel.app/demo"
           className="inline-block px-10 py-4 bg-amber-400 text-black font-bold text-lg rounded-xl hover:bg-amber-300 transition-colors"
         >
-          Registrati gratis
+          Prova la demo gratuita
         </a>
       </section>
 
