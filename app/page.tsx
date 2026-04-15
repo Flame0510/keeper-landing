@@ -1,19 +1,24 @@
 'use client';
 
+// Variant A — Pergamena scura
+// Background: #E8D5A3 (parchment dark) — uniform across ALL sections
+// Text: #2C1810 (ink) | Accent: #8B1A1A (crimson) | Gold: #B8860B
+// WCAG AA: #2C1810 on #E8D5A3 = ~8.3:1 ✓ | #8B1A1A on #E8D5A3 = ~5.1:1 ✓
+
 export default function Home() {
   return (
     <main
-      style={{ backgroundColor: '#F4E4C1', color: '#2C1810', fontFamily: "'Crimson Text', serif" }}
+      style={{ backgroundColor: '#E8D5A3', color: '#2C1810', fontFamily: "'Crimson Text', serif" }}
       className="min-h-screen"
     >
 
       {/* HERO */}
-      <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
+      <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center" style={{ backgroundColor: '#E8D5A3' }}>
         <span
           className="inline-block mb-6 px-4 py-1.5 rounded-full text-sm font-medium"
           style={{
             border: '1px solid #B8860B',
-            backgroundColor: 'rgba(184,134,11,0.1)',
+            backgroundColor: 'rgba(184,134,11,0.12)',
             color: '#8B1A1A',
           }}
         >
@@ -31,7 +36,7 @@ export default function Home() {
         >
           Il Game Master che non dorme mai.
         </p>
-        <p className="max-w-xl mb-10 text-lg leading-relaxed" style={{ color: '#6B4C3B' }}>
+        <p className="max-w-xl mb-10 text-lg leading-relaxed" style={{ color: '#5A3520' }}>
           Un motore narrativo AI che trasforma ogni tua scelta in una storia. Sessioni persistenti,
           regole D&amp;D leggere, immagini generate al volo. Niente DM umano necessario.
         </p>
@@ -47,15 +52,15 @@ export default function Home() {
         <a
           href="https://keeper-narrative-engine.vercel.app/login"
           className="text-sm transition-colors mt-4"
-          style={{ color: '#6B4C3B' }}
+          style={{ color: '#5A3520' }}
         >
           Hai già un account? Accedi →
         </a>
         <div className="text-center text-2xl my-8" style={{ color: '#B8860B' }}>⚜ ✦ ⚜</div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#EDD9A3' }}>
+      {/* HOW IT WORKS — uniform background */}
+      <section className="py-24 px-6" style={{ backgroundColor: '#E8D5A3' }}>
         <div className="max-w-5xl mx-auto">
           <h2
             className="text-3xl font-bold text-center mb-4"
@@ -63,7 +68,7 @@ export default function Home() {
           >
             Come funziona
           </h2>
-          <p className="text-center mb-16" style={{ color: '#6B4C3B' }}>
+          <p className="text-center mb-16" style={{ color: '#5A3520' }}>
             Tre passi per entrare nell&apos;avventura.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -88,9 +93,9 @@ export default function Home() {
                 key={step.title}
                 className="rounded-lg p-8 flex flex-col items-center text-center"
                 style={{
-                  backgroundColor: '#F4E4C1',
-                  border: '1px solid #C4A882',
-                  boxShadow: '0 2px 8px rgba(44,24,16,0.15)',
+                  backgroundColor: '#D4BE8A',
+                  border: '1px solid #A89060',
+                  boxShadow: '0 2px 8px rgba(44,24,16,0.18)',
                 }}
               >
                 <span className="text-4xl mb-4">{step.icon}</span>
@@ -100,7 +105,7 @@ export default function Home() {
                 >
                   {step.title}
                 </h3>
-                <p className="leading-relaxed" style={{ color: '#6B4C3B' }}>{step.desc}</p>
+                <p className="leading-relaxed" style={{ color: '#5A3520' }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -108,8 +113,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#F4E4C1' }}>
+      {/* FEATURES — uniform background */}
+      <section className="py-24 px-6" style={{ backgroundColor: '#E8D5A3' }}>
         <div className="max-w-5xl mx-auto">
           <h2
             className="text-3xl font-bold text-center mb-4"
@@ -117,7 +122,7 @@ export default function Home() {
           >
             Funzionalità
           </h2>
-          <p className="text-center mb-16" style={{ color: '#6B4C3B' }}>
+          <p className="text-center mb-16" style={{ color: '#5A3520' }}>
             Tutto ciò di cui hai bisogno per giocare.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -163,15 +168,15 @@ export default function Home() {
                 key={feat.title}
                 className="rounded-lg p-6 relative"
                 style={{
-                  backgroundColor: '#EDD9A3',
-                  border: '1px solid #C4A882',
-                  boxShadow: '0 2px 8px rgba(44,24,16,0.15)',
+                  backgroundColor: '#D4BE8A',
+                  border: '1px solid #A89060',
+                  boxShadow: '0 2px 8px rgba(44,24,16,0.18)',
                 }}
               >
                 {feat.soon && (
                   <span
                     className="absolute top-4 right-4 text-xs px-2 py-0.5 rounded-full"
-                    style={{ border: '1px solid #C4A882', color: '#6B4C3B' }}
+                    style={{ border: '1px solid #A89060', color: '#5A3520' }}
                   >
                     Coming soon
                   </span>
@@ -183,7 +188,7 @@ export default function Home() {
                 >
                   {feat.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#6B4C3B' }}>{feat.desc}</p>
+                <p className="text-sm leading-relaxed" style={{ color: '#5A3520' }}>{feat.desc}</p>
               </div>
             ))}
           </div>
@@ -191,8 +196,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PREZZI */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#EDD9A3' }}>
+      {/* PREZZI — uniform background */}
+      <section className="py-24 px-6" style={{ backgroundColor: '#E8D5A3' }}>
         <div className="max-w-6xl mx-auto">
           <h2
             className="text-3xl font-bold text-center mb-4"
@@ -200,7 +205,7 @@ export default function Home() {
           >
             Piani
           </h2>
-          <p className="text-center mb-16" style={{ color: '#6B4C3B' }}>
+          <p className="text-center mb-16" style={{ color: '#5A3520' }}>
             Inizia gratis. Scala quando vuoi.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -238,11 +243,11 @@ export default function Home() {
                 key={plan.name}
                 className="rounded-lg p-8 flex flex-col"
                 style={{
-                  backgroundColor: plan.highlight ? '#F4E4C1' : '#F4E4C1',
-                  border: plan.highlight ? '3px double #8B1A1A' : '1px solid #C4A882',
+                  backgroundColor: '#D4BE8A',
+                  border: plan.highlight ? '3px double #8B1A1A' : '1px solid #A89060',
                   boxShadow: plan.highlight
                     ? '0 4px 16px rgba(139,26,26,0.25)'
-                    : '0 2px 8px rgba(44,24,16,0.15)',
+                    : '0 2px 8px rgba(44,24,16,0.18)',
                 }}
               >
                 {plan.highlight && (
@@ -264,7 +269,7 @@ export default function Home() {
                 </h3>
                 <div className="flex items-end gap-0.5 mb-6">
                   <span className="text-4xl font-black" style={{ color: '#2C1810' }}>{plan.price}</span>
-                  <span className="mb-1" style={{ color: '#6B4C3B' }}>{plan.period}</span>
+                  <span className="mb-1" style={{ color: '#5A3520' }}>{plan.period}</span>
                 </div>
                 <ul className="space-y-2 flex-1">
                   {plan.perks.map((perk) => (
@@ -284,7 +289,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p className="text-center text-sm mt-8" style={{ color: '#6B4C3B' }}>
+          <p className="text-center text-sm mt-8" style={{ color: '#5A3520' }}>
             * I piani a pagamento sono in arrivo. Durante la beta chiusa, l&apos;accesso è gratuito per tutti gli utenti invitati.
           </p>
           <div className="text-center text-2xl my-8" style={{ color: '#B8860B' }}>⚜ ✦ ⚜</div>
